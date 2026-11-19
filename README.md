@@ -1,7 +1,7 @@
 # RobloxStrap
 
-A Bloxstrap-style bootstrapper for Roblox, built as a standalone Electron app inside the
-Nebula launcher project. It keeps its own Roblox installation, applies FastFlags and mods
+A bootstrapper for Roblox, built as a standalone Electron app inside the
+project. It keeps its own Roblox installation, applies FastFlags and mods
 right before launch, stores Roblox accounts encrypted, and adds a real server browser plus
 Discord Rich Presence.
 

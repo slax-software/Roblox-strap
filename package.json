@@ -1,0 +1,50 @@
+{
+  "name": "roblox-strap",
+  "productName": "RobloxStrap",
+  "version": "1.0.1",
+  "description": "A Bloxstrap-style bootstrapper for Roblox with FastFlags, mods, accounts, a server browser and Discord Rich Presence.",
+  "main": "main.js",
+  "author": "Jaden",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "smoke": "electron . --smoke",
+    "icon": "node scripts/icon.js",
+    "dist": "electron-builder --win nsis"
+  },
+  "build": {
+    "appId": "com.robloxstrap.app",
+    "productName": "RobloxStrap",
+    "electronVersion": "33.4.11",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "lib/**/*",
+      "renderer/**/*",
+      "assets/**/*",
+      "package.json"
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "icon": "build/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "RobloxStrap"
+    }
+  }
+}
